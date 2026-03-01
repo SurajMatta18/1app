@@ -1,0 +1,51 @@
+/* ================================================================
+   Login / Signup – Supplementary Styles
+   Extends styles.css auth-section for log_sign.html
+   ================================================================ */
+
+/* Focus ring enhancement */
+.auth-card .form-input-wrap:focus-within {
+  border-color: var(--blue-400);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.15);
+}
+
+/* Animated tab underline on hover */
+.auth-tab:hover { color: var(--gray-700); }
+
+/* Submit button pulse */
+.btn-auth {
+  position: relative;
+  overflow: hidden;
+}
+.btn-auth::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,.15), transparent);
+  opacity: 0;
+  transition: opacity .3s;
+}
+.btn-auth:hover::after { opacity: 1; }
+
+/* Password strength colors */
+.password-rules .rule.pass .rule-icon { color: var(--emerald-500); }
+.password-rules .rule:not(.pass) .rule-icon { color: var(--gray-300); }
+
+/* Form error shake */
+.form-error:not([hidden]) {
+  animation: shake .35s ease-in-out;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* Auth card entrance */
+.auth-card {
+  animation: cardEntrance .5s cubic-bezier(.4,0,.2,1) both;
+}
+@keyframes cardEntrance {
+  from { opacity: 0; transform: translateY(16px) scale(.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
