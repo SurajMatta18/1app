@@ -1,5 +1,9 @@
 # 1apportunity Landing Page - HTML Version
 
+[![Deploy to GitHub Pages](https://github.com/SurajMatta18/1app/actions/workflows/deploy.yml/badge.svg)](https://github.com/SurajMatta18/1app/actions/workflows/deploy.yml)
+
+🌐 **Live site:** [https://surajmatta18.github.io/1app/](https://surajmatta18.github.io/1app/)
+
 A pure HTML/CSS/JavaScript version of the 1apportunity landing page. No frameworks, no build tools, no dependencies - just open and use!
 
 ## 📖 Description
@@ -203,11 +207,15 @@ Currently using inline SVG icons. To use Font Awesome or other icon libraries:
 
 This HTML version can be deployed anywhere:
 
-### GitHub Pages
+### GitHub Pages (current deployment)
+The site is automatically deployed via GitHub Actions on every push to `main`.
+Live URL: [https://surajmatta18.github.io/1app/](https://surajmatta18.github.io/1app/)
+
+To set up in a new repo:
 1. Push to a GitHub repository
-2. Go to Settings → Pages
-3. Select source branch
-4. Your site will be live at `https://username.github.io/repo-name/html-version/`
+2. Add the workflow file at `.github/workflows/deploy.yml`
+3. Go to Settings → Pages → Source → GitHub Actions
+4. Push to `main` to trigger the first deployment
 
 ### Netlify
 1. Drag and drop the `html-version` folder to [Netlify Drop](https://app.netlify.com/drop)
